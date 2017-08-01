@@ -1,0 +1,154 @@
+<import src="../common/article-card.wxml"/>
+<import src="../common/product-card.wxml"/>
+<!--index.wxml-->
+<!--导航栏-->
+<!--
+<view class="navbar">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+</view>
+-->
+<!--
+<view class="nav-scroll">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+          <text wx:for="{{section}}" wx:key="id" id="{{item.id}}" catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+      </scroll-view>
+</view>
+-->
+<!-- 首页 推荐 -->
+<view class="recommend" hidden="{{currentTab!==0}}">
+  <!-- 轮播图 -->
+  <swiper class="swiper" circular="true" indicator-dots="true" autoplay="true" interval="3000" duration="500" indicator-color="rgba(255,255,255,.8)"
+    indicator-active-color="#31c27c">
+    <block wx:for="{{slider}}" wx:key="{{index}}">
+      <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+        <image src="{{item.picUrl}}" class="img" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+<!--   
+  <view class="fd-bd">
+    <view class="fd-bd-title">实用工具</view>
+  </view>
+  
+  
+  <view class="nav-box nav-box1  " style="" >
+    <view class='item item1'>
+        <image src="http://m.fangjinsuo.com/public/static/images/icon/icon4.png"/>
+        <text>上班族</text>
+        <text>信用贷</text>
+    </view>
+    <view class='item item1'>
+        <image src="http://m.fangjinsuo.com/public/static/images/icon/icon5.png"/>
+        <text>上班族</text>
+        <text>信用贷</text>
+    </view>
+    <view class='item item1'>
+        <image src="http://m.fangjinsuo.com//public/static/images/icon/icon6.png"/>
+        <text>上班族</text>
+        <text>信用贷</text>
+    </view>
+  </view> -->
+  
+  <view class="clear"></view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">管理团队</view>
+  </view>
+  <view class="fd-bd-person">     
+      <block wx:for="{{filmDetail.casts}}" wx:for-item="filmDetailCastItem" wx:key="filmDetailCastItem">
+          <view class="fd-bd-person-item" data-id="{{filmDetailCastItem.id}}" bindtap="viewPersonDetail">
+              <image class="fd-bd-person-avatar" src="{{filmDetailCastItem.avatars.medium}}"></image>
+              <view class="fd-bd-person-name">{{filmDetailCastItem.name}}</view>
+              <view class="fd-bd-person-role">{{filmDetailCastItem.job}}</view>
+          </view>
+      </block>
+  </view>
+  
+  <view class="fd-bd">
+    <view class="fd-bd-title">热门产品</view>
+  </view>
+  <!-- 产品列表部分 -->
+  <view class="news">
+    <block wx:for="{{news.item}}" wx:key="news">
+      
+        <template is="product-card" data="{{item}}" />
+      
+    </block>
+  </view>
+
+  <!--
+  <view class="channel">
+    <text class="title">最新资迅</text>
+  </view>
+  -->
+  <view class="fd-bd">
+    <view class="fd-bd-title">最新资迅</view>
+  </view>
+  <!-- 新闻列表部分 -->
+  <view class="news">
+    <block wx:for="{{news.item}}" wx:key="news">
+      <block wx:if="{{item.type == 'doc'}}"><!--文章-->
+        <template is="article-card" data="{{item}}" />
+      </block>
+    </block>
+  </view>
+
+
+  <!--
+  <view class="topList">
+      <view class="item"  data-id="1" bindtap="onToplistTap">
+        <view class="media">
+          <image class="img" src="{{image}}"></image>
+        </view>
+        <view class="info">
+          <text class="title">资迅要文01</text>
+          <view class="text" >
+            <text>我的</text>- 不错哦
+          </view>
+        </view>
+        <view class="arrow"></view>
+      </view>
+      <view class="item"  data-id="1" bindtap="onToplistTap">
+        <view class="media">
+          <image class="img" src="{{image}}"></image>
+        </view>
+        <view class="info">
+          <text class="title">资迅要文01</text>
+          <view class="text" >
+            <text>我的</text>- 不错哦
+          </view>
+        </view>
+        <view class="arrow"></view>
+      </view>
+      
+    </view>
+    -->
+</view>
+
+
+<view class="recommend" hidden="{{currentTab!==1}}">
+  <swiper class="swiper" circular="true" indicator-dots="true" autoplay="true" interval="3000" duration="500" indicator-color="rgba(255,255,255,.8)"
+    indicator-active-color="#31c27c">
+    <block wx:for="{{slider}}" wx:key="{{index}}">
+      <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">
+        <image src="{{item.picUrl}}" class="img" />
+      </swiper-item>
+    </block>
+  </swiper>
+  hello
+</view>
+
+<view class="topList" hidden="{{currentTab!==2}}">
+  hello2
+</view>
+<!--
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+-->

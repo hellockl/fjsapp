@@ -1,0 +1,63 @@
+<!--pages/calculator/calculatordetail/calculatordetail.wxml-->
+<import src="../../common/article-card.wxml"/>
+<!--导航栏-->
+<view class="navbar">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+</view>
+<view class="recommend" hidden="{{currentTab!==0}}">
+  <view class="de">
+    <view class="de_item ">
+      <view class="item_title">
+        每月还款（元）
+      </view>
+      <view class="item_content">
+        {{monthpay}}
+      </view>
+    </view>
+    
+    <view class="flex">
+      <view class="left">
+        <view class="title_a ">利息总额（万元）</view>
+        <view class="content_a">{{total_interest}}</view>
+      </view>
+      <view class="right">
+        
+        <view class="title_a">还款总额（万元）</view>
+        <view class="content_a">{{total_money}}</view>
+      
+      </view>
+    </view> 
+  </view>
+  <view class="cleanitem flex">
+    <view class="left">
+      <view class="title">贷款金额（万元）</view>
+      <view class="content">{{amount_money}}</view>
+    </view>
+    <view class="right">
+      
+      <view class="title">货款期限</view>
+      <view class="content">{{debt_years}}年（{{debt_duration}}期）</view>
+    
+    </view>
+  </view>
+  <view class="weui-cells__title" style="height:10px"></view>
+  <view class="btn-area" id="buttonContainer">
+    <button type="primary" bindtap='navToMonthpayDetail' class="btn" >查看月供详情</button>
+  </view>
+  <view class="weui-cells__title" style="height:10px"></view>
+  <view class="fd-bd">
+    <view class="fd-bd-title">推荐产品</view>
+  </view>
+  <view class="news">
+    <block wx:for="{{news.item}}" wx:key="news">
+      <block wx:if="{{item.type == 'doc'}}"><!--文章-->
+        <template is="article-card" data="{{item}}" />
+      </block>
+    </block>
+  </view>
+</view>
+
+
+<view class="recommend" hidden="{{currentTab!==1}}">
+  bbb
+</view>

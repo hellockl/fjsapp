@@ -1,0 +1,14 @@
+<!--pages/product/product.wxml-->
+<import src="../common/product-card.wxml"/>
+
+<view class="navbar">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+</view>
+<!-- 产品列表 -->
+<view class="news">
+  <block wx:for="{{news.item}}" wx:key="news">
+    
+      <template is="product-card" data="{{item}}" />
+    
+  </block>
+</view>

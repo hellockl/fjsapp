@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personCenter/personCenter",
+    "pages/calculator/calculator",
+    "pages/calculator/calculatordetail/calculatordetail",
+    "pages/calculator/monthpay/monthpay",
+    "pages/article-page/article-page",
+    "pages/product/product",
+    "pages/product/productdetail/productdetail",
+    "pages/setting/setting",
+    "pages/apply/apply"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#03a5ef",
+    "navigationBarTitleText": "房金所",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#92969c",
+    "selectedColor": "#03a5ef",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_home.png",
+        "selectedIconPath": "image/icon_home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/calculator/calculator",
+        "iconPath": "image/icon_data.png",
+        "selectedIconPath": "image/icon_data_HL.png",
+        "text": "贷款计算器"
+      },
+      {
+        "pagePath": "pages/personCenter/personCenter",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": true
+}

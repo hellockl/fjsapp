@@ -1,0 +1,20 @@
+
+
+<template name="product-card">
+  <view bindtap='navToProduct' data-id="1" class="newitem">
+    <image class="poster" src="{{item.thumbnail}}"></image>
+    <view class="meta">
+      <text class="title">{{item.title}}</text>
+      <text class="title_a">1837人申请/3天放款</text>
+      <view class="other clearfloat">
+        <view class="source product-tag">
+          <image wx:if="{{item.subscribe.logo}}" src="{{item.subscribe.logo}}" class="logo" />
+          <text wx:if="{{item.source}}" class="product-tag-item">{{item.source}}</text>
+        </view>
+        
+        <view wx:if="{{item.style.attribute}}" class="zhuanti">{{item.style.attribute}}</view>
+        <view wx:elif="{{item.type == 'sports_live'}}" class="comment" style="color: #de0000;">直播中  . . . </view>
+      </view>
+    </view>
+  </view>
+</template>

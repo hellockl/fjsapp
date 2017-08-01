@@ -1,0 +1,159 @@
+/* pages/apply/apply.wxss */
+page{
+background:#fff1bc;
+font-family: "Microsoft YaHei";
+font-size:12px;
+padding-bottom: 45px;
+}
+input,button{font-family: "Microsoft YaHei";}
+.image_frame{
+  width:100%;
+  height: 330px;
+}
+.form{
+  margin: 0;
+  padding:20px;
+  
+}
+.form .section{
+  position: relative;
+  margin-bottom:10px;
+  overflow: hidden;
+  background:#fff;
+  height:45px;
+  line-height: 45px;
+  border-radius: 5px;
+  font-size:14px;
+}
+.form .section__title{
+  float:left;
+  margin:0 0 0 10px;
+  width:70px;
+  color: #666;
+} 
+.form .arrow{
+  position: absolute;
+  top:18px;
+  right:20px;
+  width: 20px;
+  height: 10px;
+  /*background:url("/images/icon12.png") no-repeat;*/
+  background-size:100% 100%;
+}
+.form .inpt{
+  height:45px;
+  line-height: 45px;
+  font-size:14px;
+}
+.form label{
+  margin-right:15px;
+}
+.form .unit{
+  position: absolute;
+  top:0;
+  right:20px;
+  color:#707070;
+}
+
+.form .verify{
+  position: absolute;
+  top:8px;
+  right:20px;
+  padding-left:20px;
+  height:30px;
+  line-height: 30px;
+  color:#ec3f3f;
+  border-left:#d1d1d1 solid 1px;
+}
+.yzm{
+  border: 1px solid #fff1bc;
+  position: absolute;
+  top:8px;
+  right:20px;
+  padding-left:20px;
+  height:30px;
+  line-height: 30px;
+  color:#ec3f3f;
+  border-left:#d1d1d1 solid 1px;
+}
+.btn-area button{
+  background: #ea3335;
+  color: #fff;
+  border:0;
+}
+.footer{
+  padding-bottom:30px;
+}
+.footer text{
+  display: block;
+  text-align: center;
+  color: #555;
+}
+
+.btn_getnum{
+    font-size:28rpx;
+font-weight:550;
+color:rgb(35,35,35);
+background-color:rgba(255,255,255,0.7);
+border:solid;
+border-color:rgba(0,0,0,0.4);
+border-width:2rpx;
+border-radius:8rpx;
+width:300rpx;
+height:95%;
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+margin-right:0rpx;
+
+}
+.syzm{
+  display: flex; 
+    align-items: flex-end; 
+    align-self: center;
+    order: 1; 
+    flex-wrap: nowrap; 
+    align-content: flex-end; 
+    justify-content: center;
+}
+.fixed-btn{
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index: 10;
+  padding: 7px 0;
+  height: 42px;
+  width:100%;
+  background:#f6f6f6;
+  border-top: #ececed solid 1px;
+}
+.fixed-btn view {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    width: 90%;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    border: #ececed solid 1px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.fixed-btn .tel-btn{
+  color: #0a83df;
+}
+.fixed-btn .apply-btn{
+    color: #fff;
+    background: #168ce2;
+    border-color: #0282e0;
+}
+.fixed-btn .apply-btn text{
+  display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 18px;
+    height: 19px;
+    /*background: url(/images/tel-ico.png) no-repeat;*/
+}

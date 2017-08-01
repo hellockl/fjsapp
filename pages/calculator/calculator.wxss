@@ -1,0 +1,61 @@
+/* pages/calculator/calculator.wxss */
+@import "../common/lib/weui.wxss";
+page{
+  background:#f0f0f0;
+  font-family: "Microsoft YaHei";
+  
+}
+.picker{
+  padding: 19rpx 26rpx;
+  background-color: #FFFFFF;
+}
+.navbar {
+    display: flex;
+    background: #fff;
+    height: 80rpx;
+}
+
+.navbar .item {
+    position: relative;
+    flex: auto;
+    text-align: center;
+    line-height: 80rpx;
+    margin:0 50px
+}
+
+.navbar .item.active {
+    color: #31c27c;
+}
+
+.navbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rpx;
+    background: #31c27c;
+}
+.yuan{
+  width: 34px
+}
+.bottom:after{
+  
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #D9D9D9;
+  color: #D9D9D9;
+
+
+}
+page .btn{
+  margin:15px 15px 15px 15px;
+  background-color:#03a5ef;
+  color:#fff;
+  font-size:13pt;
+}

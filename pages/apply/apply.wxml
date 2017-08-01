@@ -1,0 +1,54 @@
+<!--pages/apply/apply.wxml-->
+<image class="image_frame" src="/image/fangwudiya-banner.png" mode="aspectFill"></image>
+<view class="form">
+  <form bindsubmit="formSubmit" bindreset="formReset" id="form">
+    <view class="section">
+      <view class="section__title">选择城市</view>
+      <icon type="String" class="arrow"></icon>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">贷款金额</view>
+      <input name="input" maxlength="5" bindchange="input_amount" placeholder="输入意向贷款金额" class="inpt" />
+      <text class="unit">万</text>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">有无房产</view>
+      <radio-group name="radio-group" bindchange="radio_house">
+        <label>
+          <radio value="1" />有</label>
+        <label>
+          <radio value="0" />无</label>
+      </radio-group>
+    </view>
+    <view class="section">
+      <view class="section__title">手机号码</view>
+      <input name="input" maxlength="11" bindchange="input_phoneNum" placeholder="输入您的手机号码" class="inpt" />
+    </view>
+    <view class="section syzm">
+        <view class="section__title">验证码</view>
+        <input name="input" maxlength="6" bindchange="input_code" placeholder="输入验证码" class="inpt" />
+        <view class="btn_getnum" catchtap="sendPhoneNum" wx:if="{{time == -1}}">
+          获取验证码
+        </view>
+        <view class="btn_getnum" wx:else>
+          获取验证码({{time}}s)
+        </view>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">申请贷款</button>
+    </view>
+  </form>
+</view>
+<view class="footer">
+  <text>©2014-2017 I www.fangjinsuo.com All Right Reserved</text>
+  <text>房金所金融服务股份有限公司 400-810-2999</text>
+</view>
+<view class="fixed-btn">
+  <view bindtap="makephonecall" class="tel-btn" hover-class="navigator-hover">电话咨询</view>
+  <!--<navigator url="#form" class="apply-btn" hover-class="navigator-hover"><text></text>立即申请</navigator>-->
+</view>

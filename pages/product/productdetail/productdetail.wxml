@@ -1,0 +1,51 @@
+<!--pages/product/productdetail/productdetail.wxml-->
+<view class="product">
+    <view class="de_item ">
+      <view class="item_title">
+        房金3号-房抵贷
+      </view>
+      <view class="item_content">
+        666
+      </view>
+    </view>
+    
+    <view class="flex">
+      <view class="left">
+        <view class="title_a ">贷款本金</view>
+        <view class="content_a">10.00元</view>
+      </view>
+      <view class="center">
+        
+        <view class="title_a">月还款额</view>
+        <view class="content_a">12.00元</view>
+      
+      </view>
+      <view class="right">
+        
+        <view class="title_a">总利息</view>
+        <view class="content_a">12.00元</view>
+      
+      </view>
+    </view> 
+</view>
+<view class="navbar">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navbar}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onNavbarTap">{{item}}</text>
+</view>
+<view class="recommend" hidden="{{currentTab!==0}}">
+1.所需材料1
+
+</view>
+<view class="recommend" hidden="{{currentTab!==1}}">
+所需材料2
+</view>
+<view class="recommend" hidden="{{currentTab!==2}}">
+所需材料3
+</view>
+  
+<view class="weui-cells__title" style="height:10px"></view>
+<view class="btn-area" id="buttonContainer">
+  <button type="primary" bindtap='navToApply' class="btn1" >立即申请</button>
+  <button type="primary" bindtap='makephonecall' class="btn2" >电话咨询</button>
+</view>
+
+  
